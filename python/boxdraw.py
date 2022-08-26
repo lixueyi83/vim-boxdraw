@@ -112,8 +112,8 @@ def char_at(lines, y, x, default=' '):
 def draw_box(lines, y1, x1, y2, x2):
     "Draws a box and clears its contents with spaces."
     y, x, h, w = block_pos(y1, x1, y2, x2)
-    box = line([[line('+-+',w)], [line('| |',w)], [line('+-+',w)]], h)
-    # box = line([[line('┌─┐',w)], [line('│ │',w)], [line('└─┘',w)]], h)
+    # box = line([[line('+-+',w)], [line('| |',w)], [line('+-+',w)]], h)
+    box = line([[line('┌─┐',w)], [line('│ │',w)], [line('└─┘',w)]], h)
     return replace_block(lines, y, x, box)
 
 def fill_box(lines, y1, x1, y2, x2, yalign, xalign, text):
